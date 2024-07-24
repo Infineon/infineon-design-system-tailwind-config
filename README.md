@@ -1,7 +1,7 @@
 **Tailwind CSS Custom Config File for DDS Projects**
 ===========================
 
-This repository distributes a custom Tailwind CSS config file based on the DDS design tokebs that you can use in your projects together with the DDS components.
+This repository distributes a custom Tailwind CSS config file based on the DDS design tokebs that you can use in your projects together with the DDS components. Visit the [DEMO](https://infineon.github.io/infineon-design-system-tailwind-config/) to check out the available styles.
 
 **Getting Started**
 ---------------
