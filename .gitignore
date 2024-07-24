@@ -1,0 +1,33 @@
+# Node modules directory
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Build directories
+dist/
+build/
+public/
+
+# npm debug log
+npm-debug.log*
+
+# Tailwind CSS build files
+src/styles/tailwind.css
+src/styles/tailwind.css.map
+
+# IDE specific files (e.g., VSCode, WebStorm)
+.vscode/
+.idea/
+
+# Environment variable files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

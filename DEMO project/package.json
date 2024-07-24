@@ -1,0 +1,13 @@
+{
+  "name": "custom-tailwind-config",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./src/styles.css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.6"
+  },
+  "dependencies": {
+    "@infineon/infineon-design-system-stencil": "^24.0.2"
+  }
+}
