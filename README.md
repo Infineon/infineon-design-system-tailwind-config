@@ -1,4 +1,4 @@
-**Tailwind CSS Config File for DDS Projects**
+**Tailwind CSS Custom Config File for DDS Projects**
 ===========================
 
 This repository distributes a custom Tailwind CSS config file based on the DDS design tokebs that you can use in your projects together with the DDS components.
