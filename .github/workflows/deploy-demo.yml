@@ -27,14 +27,14 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: actions/download-artifact@v2
         with:
-          name: html-file
-          path: /tmp/html-file
+          name: index.html
+          path: /tmp/index.html
 
       - name: Deploy to GitHub Pages
         uses: actions/download-artifact@v2
         with:
-          name: css-file
-          path: /tmp/css-file
+          name: style.css
+          path: /tmp/style.css
 
       - name: Deploy to GitHub Pages
         run: |
