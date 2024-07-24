@@ -15,13 +15,13 @@ jobs:
       - name: Upload HTML file
         uses: actions/upload-artifact@v2
         with:
-          name: html-file
+          name: index.html
           path: ./DEMO/src/index.html
 
       - name: Upload CSS file
         uses: actions/upload-artifact@v2
         with:
-          name: css-file
+          name: style.css
           path: ./DEMO/src/style.css
 
       - name: Deploy to GitHub Pages
