@@ -1,4 +1,4 @@
-name: Deploy Demo to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -12,8 +12,39 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload HTML file
+        uses: actions/upload-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./DEMO/src
+          name: html-file
+          path: ./DEMO/src/index.html
+
+      - name: Upload CSS file
+        uses: actions/upload-artifact@v2
+        with:
+          name: css-file
+          path: ./DEMO/src/style.css
+
+      - name: Deploy to GitHub Pages
+        uses: actions/download-artifact@v2
+        with:
+          name: html-file
+          path: /tmp/html-file
+
+      - name: Deploy to GitHub Pages
+        uses: actions/download-artifact@v2
+        with:
+          name: css-file
+          path: /tmp/css-file
+
+      - name: Deploy to GitHub Pages
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git remote add origin https://github.com/${GITHUB_REPO}.git
+          git push --force origin main:gh-pages
+          mkdir -p /tmp/html-file
+          cp /tmp/html-file/index.html /tmp/html-file/
+          cp /tmp/css-file/style.css /tmp/html-file/
+          git add /tmp/html-file
+          git commit -m "Deploy to GitHub Pages"
+          git push --force origin gh-pages
