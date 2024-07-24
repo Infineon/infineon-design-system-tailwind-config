@@ -3,48 +3,34 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # This triggers the workflow on push events to the main branch
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Upload HTML file
-        uses: actions/upload-artifact@v2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
         with:
-          name: index.html
-          path: ./DEMO/src/index.html
+          node-version: '14'
 
-      - name: Upload CSS file
-        uses: actions/upload-artifact@v2
-        with:
-          name: style.css
-          path: ./DEMO/src/style.css
-
-      - name: Deploy to GitHub Pages
-        uses: actions/download-artifact@v2
-        with:
-          name: index.html
-          path: /tmp/index.html
-
-      - name: Deploy to GitHub Pages
-        uses: actions/download-artifact@v2
-        with:
-          name: style.css
-          path: /tmp/style.css
-
-      - name: Deploy to GitHub Pages
+      - name: Navigate to DEMO folder and install dependencies
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git remote add origin https://github.com/${GITHUB_REPO}.git
-          git push --force origin main:gh-pages
-          mkdir -p /tmp/html-file
-          cp /tmp/html-file/index.html /tmp/html-file/
-          cp /tmp/css-file/style.css /tmp/html-file/
-          git add /tmp/html-file
-          git commit -m "Deploy to GitHub Pages"
-          git push --force origin gh-pages
+          cd DEMO
+          npm install
+
+      - name: Build project
+        run: |
+          cd DEMO
+          npm run build
+
+   - name: Deploy to GitHub Pages
+     uses: peaceiris/actions-gh-pages@v3
+     working-directory: ./DEMO
+     with:
+       github_token: ${{ secrets.GITHUB_TOKEN }}
+       publish_dir: src
