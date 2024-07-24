@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Custom Styles Showcase</title>
+    <link rel="stylesheet" href="styles.css"></head>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@infineon/infineon-design-system-stencil/dist/infineon-design-system-stencil/infineon-design-system-stencil.esm.js"></script>'
+<body class="font-sans">
+    <!-- DDS Component -->
+    <section class="p-8">
+      <ifx-alert variant="primary" icon="c-info-24" closable="true">This demo is showcasing the use of the custom tailwind config together with DDS components on a vanilla html page.</ifx-alert>
+      <div class="p-4">
+        <ifx-button type="button" disabled="false" variant="primary" size="m" target="_blank" theme="default" href="https://infineon.github.io/infineon-design-system-stencil/" full-width="false">
+          <ifx-icon icon="arrow-right-16"></ifx-icon>Learn more about DDS 
+        </ifx-button>
+      </div>
+    </section>
+
+    <!-- Screen Sizes -->
+    <section class="p-8">
+        <h2 class="text-display-02 mb-4">Screen Size Examples</h2>
+        <div class="bg-engineering-100 text-white text-body-semibold-02 p-4 align-middle xs:bg-ocean-100 sm:bg-ocean-200 md:bg-ocean-300 lg:bg-ocean-400 xl:bg-ocean-500 2xl:bg-ocean-600">
+          <ifx-icon icon="c-warning-f-16"></ifx-icon> Resize the browser to see the background color change based on screen sizes.
+        </div>
+    </section>
+
+    <!-- Colors -->
+    <section class="p-8">
+        <h2 class="text-display-02 mb-4">Color Palette</h2>
+        <div class="grid grid-cols-2 gap-4">
+            <div class="bg-engineering-100 p-4">engineering-100</div>
+            <div class="bg-engineering-200 p-4">engineering-200</div>
+            <div class="bg-engineering-300 p-4">engineering-300</div>
+            <div class="bg-engineering-400 p-4">engineering-400</div>
+            <div class="bg-engineering-500 p-4 text-white">engineering-500</div>
+            <div class="bg-engineering-600 p-4 text-white">engineering-600</div>
+            <div class="bg-ocean-100 p-4">ocean-100</div>
+            <div class="bg-ocean-200 p-4">ocean-200</div>
+            <div class="bg-ocean-300 p-4 text-white">ocean-300</div>
+            <div class="bg-ocean-400 p-4 text-white">ocean-400</div>
+            <div class="bg-ocean-500 p-4 text-white">ocean-500</div>
+            <div class="bg-ocean-600 p-4 text-white">ocean-600</div>
+            <div class="bg-ocean-700 p-4 text-white">ocean-700</div>
+            <div class="bg-red-500 p-4 text-white">red-500</div>
+            <div class="bg-red-600 p-4 text-white">red-600</div>
+            <div class="bg-red-700 p-4 text-white">red-700</div>
+            <div class="bg-orange-500 p-4 text-white">orange-500</div>
+            <div class="bg-green-500 p-4 text-white">green-500</div>
+            <div class="bg-lawn-500 p-4 text-white">lawn-500</div>
+            <div class="bg-lawn-700 p-4 text-white">lawn-700</div>
+            <div class="bg-berry-400 p-4 text-white">berry-400</div>
+            <div class="bg-berry-500 p-4 text-white">berry-500</div>
+            <div class="bg-sun-400 p-4">sun-400</div>
+            <div class="bg-sun-500 p-4">sun-500</div>
+            <div class="bg-sand-400 p-4">sand-400</div>
+            <div class="bg-sand-500 p-4">sand-500</div>
+            <div class="bg-overlay-light p-4">overlay-light</div>
+            <div class="bg-overlay-dark p-4 text-white">overlay-dark</div>
+        </div>
+    </section>
+
+    <!-- Box Shadows -->
+    <section class="p-8">
+        <h2 class="text-display-02 mb-4">Box Shadows</h2>
+        <div class="grid grid-cols-1 gap-4">
+            <div class="p-4 shadow-none">No Shadow</div>
+            <div class="p-4 shadow">Default Shadow</div>
+            <div class="p-4 shadow-small">Small Shadow</div>
+            <div class="p-4 shadow-large">Large Shadow</div>
+        </div>
+    </section>
+
+    <!-- Border Radius and Widths -->
+    <section class="p-8">
+        <h2 class="text-display-02 mb-4">Border Radius and Widths</h2>
+        <div class="grid grid-cols-1 gap-4">
+            <div class="p-4 border border-0">Border 0</div>
+            <div class="p-4 border border-2">Border 2</div>
+            <div class="p-4 border border-3">Border 3</div>
+            <div class="p-4 border border-4">Border 4</div>
+            <div class="p-4 border border-black rounded-none">No Border Radius</div>
+            <div class="p-4 border border-black rounded">Default Border Radius</div>
+            <div class="p-4 border border-black rounded-25">Rounded-25</div>
+            <div class="p-4 border border-black rounded-50">Rounded-50</div>
+            <div class="p-4 border border-black rounded-100">Rounded-100</div>
+            <div class="p-4 border border-black rounded-200">Rounded-200</div>
+            <div class="p-4 border border-black rounded-full">Full Border Radius</div>
+        </div>
+    </section>
+
+    <!-- Typography -->
+    <section class="p-8">
+        <h2 class="text-display-02 mb-4">Typography</h2>
+        <div>
+            <h1 class="text-display-01 mb-4">Display 01</h1>
+            <h2 class="text-display-02 mb-4">Display 02</h2>
+            <h3 class="text-display-03 mb-4">Display 03</h3>
+            <h4 class="text-heading-01 mb-4">Heading 01</h4>
+            <h5 class="text-heading-compact-01 mb-4">Heading Compact 01</h5>
+            <h6 class="text-heading-02 mb-4">Heading 02</h6>
+            <h6 class="text-heading-compact-02 mb-4">Heading Compact 02</h6>
+            <h6 class="text-heading-03 mb-4">Heading 03</h6>
+            <h6 class="text-heading-compact-03 mb-4">Heading Compact 03</h6>
+            <h6 class="text-heading-04 mb-4">Heading 04</h6>
+            <h6 class="text-heading-compact-04 mb-4">Heading Compact 04</h6>
+            <h6 class="text-heading-05 mb-4">Heading 05</h6>
+            <h6 class="text-heading-compact-05 mb-4">Heading Compact 05</h6>
+            <h6 class="text-heading-06 mb-4">Heading 06</h6>
+            <h6 class="text-heading-compact-06 mb-4">Heading Compact 06</h6>
+            <p class="text-eyebrow-01 mb-4">Eyebrow 01</p>
+            <p class="text-eyebrow-02 mb-4">Eyebrow 02</p>
+            <p class="text-eyebrow-03 mb-4">Eyebrow 03</p>
+            <p class="text-body-01 mb-4">Body 01</p>
+            <p class="text-body-02 mb-4">Body 02</p>
+            <p class="text-body-underline-02 mb-4 underline">Body Underline 02</p>
+            <p class="text-body-semibold-02 mb-4 font-semibold">Body Semibold 02</p>
+            <p class="text-body-03 mb-4">Body 03</p>
+            <p class="text-body-semibold-03 mb-4 font-semibold">Body Semibold 03</p>
+            <p class="text-body-underline-03 mb-4 underline">Body Underline 03</p>
+            <p class="text-body-semibold-underline-03 mb-4 font-semibold underline">Body Semibold Underline 03</p>
+            <p class="text-body-04 mb-4">Body 04</p>
+            <p class="text-body-semibold-04 mb-4 font-semibold">Body Semibold 04</p>
+            <p class="text-body-underline-04 mb-4 underline">Body Underline 04</p>
+            <p class="text-body-semibold-underline-04 mb-4 font-semibold underline">Body Semibold Underline 04</p>
+            <p class="text-body-05 mb-4">Body 05</p>
+            <p class="text-body-semibold-05 mb-4 font-semibold">Body Semibold 05</p>
+            <p class="text-body-06 mb-4">Body 06</p>
+        </div>
+    </section>
+</body>
+</html>
