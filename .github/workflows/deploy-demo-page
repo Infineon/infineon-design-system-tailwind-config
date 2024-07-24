@@ -26,8 +26,9 @@ jobs:
           cd DEMO
           npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./DEMO/src  # Directory to deploy
+   - name: Deploy to GitHub Pages
+     uses: peaceiris/actions-gh-pages@v3
+     working-directory: ./DEMO
+     with:
+       github_token: ${{ secrets.GITHUB_TOKEN }}
+       publish_dir: src
