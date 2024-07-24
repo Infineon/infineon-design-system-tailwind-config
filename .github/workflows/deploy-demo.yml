@@ -1,4 +1,5 @@
-name: Deploy demo to GitHub Pages
+```yaml
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -8,24 +9,18 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
+      - name: Install dependencies
+        run: |
+          npm install
 
-    - name: Install dependencies
-      run: npm install
-
-    - name: Build the project
-      run: npm run build
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./DEMO-project/src
+      - name: Deploy to GitHub Pages
+        uses: actions/github-pages@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          directory: DEMO/src
+          repository_name: ${{ github.repository }}
+          branch: gh-pages
