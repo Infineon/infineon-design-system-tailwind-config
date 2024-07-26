@@ -11,7 +11,7 @@ To use this config file in your project, follow these steps:
 1. **Install Tailwind CSS**: Make sure you have Tailwind CSS installed in your project by running `npm install tailwindcss` or `yarn add tailwindcss`. More info in the [Tailwind documentation](https://tailwindcss.com/docs/installation).
 2. **Copy the config file**: Copy the `tailwind.config.js` file from this repository into the root of your project and replace the original config if necessary.
 3. **Finish the configuration**: Once you have the tailwind.config.js file in place, you need to finalize your setup to make full use of Tailwind CSS. This involves importing Tailwind CSS into your project, extending the config with required plugins and integrating Tailwind to your build process. For more info see the section below and check the Tailwind documentation.
-4. **Start using Tailwind**:  You can now use Tailwind CSS in your project. Make sure to import the CSS file in your HTML file or using the @apply directive in your CSS files.
+4. **Start using Tailwind**:  You can now use Tailwind CSS in your project. Make sure to reference the CSS file in your HTML files and check the Tailwind documentation if you run into issues.
 
 **Config File Overview**
 ---------------------
